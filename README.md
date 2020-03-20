@@ -24,7 +24,7 @@ A python language library for language detection and translation
         - make
         - sudo make install
     2. Pyicu
-        - pip3.7 --no-cache-dir install pyicu
+        - pip --no-cache-dir install pyicu
     3. Polyglot
         - git clone https://github.com/aboSamoor/polyglot
         - python setup.py install
