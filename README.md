@@ -1,9 +1,9 @@
-# loopcv_lang
+# Introduction
 A python language library for language detection and translation
 
 
-# LANGUAGE DETECTION
-## PREREQUISITES:
+# Language Detection
+## Prerequisites:
 1. Install FastApi & Uvicorn
     - sudo pip3.7 install fastapi
     - sudo pip3.7 install uvicorn
@@ -36,18 +36,18 @@ A python language library for language detection and translation
     - python -m spacy download en
     - pip install spacy_cld
     
-## RUNNING TRANSLATION LIB:
+## Running:
 - Run server:
     - uvicorn detect_language:app --reload
 - Hit browser: http://127.0.0.1:8000/docs
 
 
-# TRANSLATION
-##PREREQUISITES:
+# Translation
+## Prerequisites:
 1. pip3.7 install googletrans
 2. pip3.7 install translate
 
-## RUNNING:
+## Running:
 - Run server:
     - uvicorn translate_cv:app --reload
 - Hit browser: http://127.0.0.1:8000/docs
