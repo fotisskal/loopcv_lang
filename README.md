@@ -4,12 +4,13 @@ A python language library for language detection and translation
 
 # Language Detection
 ## Prerequisites:
-1. Install FastApi & Uvicorn
-    - sudo pip3.7 install fastapi
-    - sudo pip3.7 install uvicorn
+1. Install FastApi & Uvicorn (as root)
+    - pip install fastapi
+    - pip install uvicorn
     
 2. Install Polyglot
-    1. Install Icu4c
+    - The following procedure is followed for MacOs.
+    1. Icu4c
         - brew uninstall --force icu4c
         - brew cleanup -s icu4c
         - brew cleanup --prune-prefix
@@ -21,18 +22,18 @@ A python language library for language detection and translation
         - ./runConfigureICU MacOSX
         - make
         - sudo make install
-    2. Install Pyicu
+    2. Pyicu
         - pip3.7 --no-cache-dir install pyicu
-    3. Install Polyglot
+    3. Polyglot
         - git clone https://github.com/aboSamoor/polyglot
-        - python3.7 setup.py install
+        - python setup.py install
         
 3. Install Langdetect (Optional) <br />
-    - pip3 install langdetect
+    - pip install langdetect
    
 4. Install Spacy (Optional) <br />
-    - pip3 install -U spacy
-    - pip3 install spacy-langdetect
+    - pip install -U spacy
+    - pip install spacy-langdetect
     - python -m spacy download en
     - pip install spacy_cld
     
@@ -44,8 +45,8 @@ A python language library for language detection and translation
 
 # Translation
 ## Prerequisites:
-1. pip3.7 install googletrans
-2. pip3.7 install translate
+1. pip install googletrans
+2. pip install translate
 
 ## Running:
 - Run server:
