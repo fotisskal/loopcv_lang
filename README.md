@@ -3,7 +3,7 @@ A python language library for language detection and translation
 
 
 # LANGUAGE DETECTION
-##PREREQUISITES:
+## PREREQUISITES:
 1. Install FastApi & Uvicorn
     - sudo pip3.7 install fastapi
     - sudo pip3.7 install uvicorn
@@ -36,7 +36,7 @@ A python language library for language detection and translation
     - python -m spacy download en
     - pip install spacy_cld
     
-##RUNNING TRANSLATION LIB:
+## RUNNING TRANSLATION LIB:
 - Run server:
     - uvicorn detect_language:app --reload
 - Hit browser: http://127.0.0.1:8000/docs
@@ -47,7 +47,7 @@ A python language library for language detection and translation
 1. pip3.7 install googletrans
 2. pip3.7 install translate
 
-##RUNNING:
+## RUNNING:
 - Run server:
     - uvicorn translate_cv:app --reload
 - Hit browser: http://127.0.0.1:8000/docs
