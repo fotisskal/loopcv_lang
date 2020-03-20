@@ -9,7 +9,8 @@ A python language library for language detection and translation
     - pip install uvicorn
     
 2. Install Polyglot
-    - The following procedure is followed for MacOs.
+    - For MacOS:
+    <br/><br/>
     1. Icu4c
         - brew uninstall --force icu4c
         - brew cleanup -s icu4c
@@ -27,6 +28,9 @@ A python language library for language detection and translation
     3. Polyglot
         - git clone https://github.com/aboSamoor/polyglot
         - python setup.py install
+    <br/><br/>
+    - For Centos (requires numpy and libicu-dev if not already installed):
+        - pip install polyglot
         
 3. Install Langdetect (Optional) <br />
     - pip install langdetect
