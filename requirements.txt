@@ -1,0 +1,9 @@
+fastapi
+uvicorn
+googletrans
+translate
+langdetect
+polyglot
+spacy
+spacy-langdetect
+spacy_cld
