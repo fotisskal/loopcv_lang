@@ -1,3 +1,5 @@
+pycountry
+pydantic
 fastapi
 uvicorn
 googletrans
