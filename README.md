@@ -10,7 +10,9 @@ A python language library for language detection and translation
     
 2. Install Polyglot
 
-    - For Linux (requires numpy and libicu-dev if not already installed):
+    - For Linux
+        - Requires numpy, libicu-dev, pycld2, pyicu and morfessor if not already installed,
+         but would 1st check running command below as standalone.
         - pip install polyglot
         
     - For MacOS:
@@ -54,7 +56,7 @@ Currently 3 different language detection APIs are used:
     - Mixed language detection
     - Most performant method
     - Most accurate method
-    - Extremely fast
+    - Extremely fast (1000 times faster than other methods)
 2. LangDetect:
     - Supports 55 languages out of the box
     - Fast
