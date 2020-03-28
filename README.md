@@ -68,8 +68,11 @@ Currently 3 different language detection APIs are used:
 
 # Translation
 ## Prerequisites:
-1. pip install googletrans
-2. pip install translate
+1. Install FastApi & Uvicorn (as root)
+    - pip install fastapi
+    - pip install uvicorn
+2. pip install googletrans
+3. pip install translate
 
 ## Running:
 - Run server:
