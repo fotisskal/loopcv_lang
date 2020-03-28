@@ -5,6 +5,7 @@ uvicorn
 googletrans
 translate
 langdetect
+pycld2
 polyglot
 spacy
 spacy-langdetect
