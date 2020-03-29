@@ -6,7 +6,7 @@ COPY src/requirements.txt ./
 
 RUN pip install --no-cache-dir -r requirements.txt
 
-COPY LanguageDetection .
-COPY Translation .
+COPY src/LanguageDetection .
+COPY src/Translation .
 
 EXPOSE 8000
