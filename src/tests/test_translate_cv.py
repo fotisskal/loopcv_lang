@@ -15,3 +15,4 @@ class Test(TestCase):
 class TestB(TestCase):
     def test_languages(self):
         print(googletrans.LANGUAGES.__len__())
+        print(googletrans.LANGUAGES)

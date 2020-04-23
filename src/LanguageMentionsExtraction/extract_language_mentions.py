@@ -20,7 +20,7 @@ class LanguageMentionsRequest(BaseModel):
 async def find_languages(request: LanguageMentionsRequest):
     doc = nlp(request.english_text.title()) # now 'english', not only 'English' is recognized
 
-    with open('./list_of_languages.txt', 'rt') as f:
+    with open('list_of_languages.txt', 'rt') as f:
         official_language_names = [line.strip('"\n ') for line in f.readlines()]
 
     detected_languages = [ent.text for ent in doc.ents 

@@ -3,51 +3,6 @@ A python language library for language detection and translation
 
 
 # Language Detection
-## Prerequisites:
-1. Install FastApi & Uvicorn (as root)
-    - pip install fastapi
-    - pip install uvicorn
-    
-2. Install Polyglot
-
-    - For Linux
-        - Requires numpy, libicu-dev, pycld2, pyicu and morfessor if not already installed,
-         but would 1st check running command below as standalone.
-        - pip install polyglot
-        
-    - For MacOS:
-        1. Icu4c
-            - brew uninstall --force icu4c
-            - brew cleanup -s icu4c
-            - brew cleanup --prune-prefix
-            - brew install icu4c
-            - curl -LO http://download.icu-project.org/files/icu4c/64.2/icu4c-64_2-src.tgz
-            - tar xzvf icu4c-64_2-src.tgz
-            - cd icu/source
-            - chmod +x runConfigureICU configure install-sh
-            - ./runConfigureICU MacOSX
-            - make
-            - sudo make install
-        2. Pyicu
-            - pip --no-cache-dir install pyicu
-        3. Polyglot
-            - git clone https://github.com/aboSamoor/polyglot
-            - python setup.py install
-
-        
-3. Install Langdetect (Optional) <br />
-    - pip install langdetect
-   
-4. Install Spacy (Optional) <br />
-    - pip install -U spacy
-    - pip install spacy-langdetect
-    - python -m spacy download en
-    - pip install spacy_cld
-    
-## Running:
-- Run server:
-    - uvicorn detect_language:app --reload
-- Hit browser: http://127.0.0.1:8000/docs
 
 ## API:
 Currently 3 different language detection APIs are used:
@@ -67,17 +22,6 @@ Currently 3 different language detection APIs are used:
     - Does not return name of language, only ISO code
 
 # Translation
-## Prerequisites:
-1. Install FastApi & Uvicorn (as root)
-    - pip install fastapi
-    - pip install uvicorn
-2. pip install googletrans
-3. pip install translate
-
-## Running:
-- Run server:
-    - uvicorn translate_cv:app --reload
-- Hit browser: http://127.0.0.1:8000/docs
 
 ## API:
 Currently 2 different translation APIs are implemented:
@@ -95,3 +39,11 @@ Currently 2 different translation APIs are implemented:
     -  	MyMemory provider which is free allows translation of max 10000 words/day.
     - 	MyMemory Issue: QUERY LENGTH LIMIT EXCEEDED. MAX ALLOWED QUERY : 500 CHARS
       	
+
+# Running:
+- Inside loopcv_lang:
+    - docker build --tag loopcvLang:1.0 .
+    
+    - docker run --publish 8000:8002 8000:8003 8000:8004 --detach --name jc loopcvLang:1.0
+    
+ - Hit browser: http://127.0.0.1:8000/docs
