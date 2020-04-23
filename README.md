@@ -42,8 +42,16 @@ Currently 2 different translation APIs are implemented:
 
 # Running:
 - Inside loopcv_lang:
-    - docker build --tag loopcvLang:1.0 .
+    - docker build -f Dockerfile.LanguageDetection --tag LanguageDetection:1.0 .
     
-    - docker run --publish 8000:8002 8000:8003 8000:8004 --detach --name jc loopcvLang:1.0
+    - docker build -f Dockerfile.LanguageMentionsExtraction --tag LanguageMentionsExtraction:1.0 .
+    
+    - docker build -f Dockerfile.Translation --tag Translation:1.0 .
+    
+    - docker run --publish 8000:8000 --detach --name ld LanguageDetection:1.0
+    
+    - docker run --publish 8000:8000 --detach --name lme LanguageMentionsExtraction:1.0
+    
+    - docker run --publish 8000:8000 --detach --name trans Translation:1.0
     
  - Hit browser: http://127.0.0.1:8000/docs
